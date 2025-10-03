@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-principal-fundo: #D2AFE2;
+  --cor-container: #A559C3;
+  --cor-botao-primario: #A700E9;
+  --cor-botao-secundario: #C876E4;
+  --cor-texto-principal: #000000;
+  --cor-texto-link: #8800FF;
+  --fonte-principal: 'Lexend';
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-principal-fundo);
+  color: var(--cor-texto-principal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-container {
+  background-color: var(--cor-container);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 11.25px 11.25px 2.25px 0 rgba(0, 0, 0, 0.69);
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-container h2 {
+  text-align: left;
+  color: var(--cor-texto-principal);
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.form-container .input-group {
+    margin-bottom: 20px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: var(--fonte-principal);
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-container .btn-enviar {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--cor-botao-primario);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.form-container .login-link {
+    text-align: center;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: var(--cor-botao-secundario);
+    border-radius: 28.125px;
+}
+
+.form-container .login-link a {
+    color: var(--cor-texto-link);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Efeitos Interativos */
+.form-container .btn-enviar:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+}
+
+.form-container input:focus {
+    outline: none; 
+    border-color: var(--cor-botao-primario);
+    box-shadow: 11.25px 11.25px 2.25px 0 rgba(0, 0, 0, 0.69);
+}
